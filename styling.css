@@ -10,10 +10,8 @@ body{
     border-radius: 8px;
     margin-right: 4px;
     margin-bottom: 4px;
-    height: 10vw;
-    width: 10vw;
-    max-width: 10vw;
-    max-height: 10vw;
+    height: 20vh;
+    width: 20vh;
     font-size: 700%;
     font-family: monospace;
     color: burlywood;
