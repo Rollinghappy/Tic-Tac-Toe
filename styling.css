@@ -1,0 +1,39 @@
+body{
+    background-attachment: fixed;
+    background-image: linear-gradient(rgb(33, 33, 33),rgb(0, 200, 255));
+    background-repeat: no-repeat;
+}
+
+.buttons{
+    background-color: rgb(58, 58, 58);
+    border: 6px solid rgb(0, 208, 255);
+    border-radius: 8px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    height: 10vw;
+    width: 10vw;
+    max-width: 10vw;
+    max-height: 10vw;
+    font-size: 700%;
+    font-family: monospace;
+    color: burlywood;
+}
+.buttons:active{
+    background-color: darkgrey;
+}
+.box{
+    margin-left: 34%;
+}
+
+#currentplayer{
+    text-align: center;
+    color: cornsilk;
+    font-family: monospace;
+    font-size: 500%;
+}
+#winner{
+    text-align: center;
+    color: cornsilk;
+    font-family: monospace;
+    font-size: 500%;
+}

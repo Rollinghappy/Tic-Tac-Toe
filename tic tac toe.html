@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Tic Tac Toe</title>
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/017/178/409/small/red-cross-check-mark-on-transparent-background-free-png.png">
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <h1 id="currentplayer"></h1>
+    <div class="box">
+        <button id="1" onclick="updateButton('1')" class="buttons">‌</button>
+        <button id="2" onclick="updateButton('2')" class="buttons">‌</button>
+        <button id="3" onclick="updateButton('3')" class="buttons">‌</button>
+        <br>
+        <button id="4" onclick="updateButton('4')" class="buttons">‌</button>
+        <button id="5" onclick="updateButton('5')" class="buttons">‌</button>
+        <button id="6" onclick="updateButton('6')" class="buttons">‌</button>
+        <br>
+        <button id="7" onclick="updateButton('7')" class="buttons">‌</button>
+        <button id="8" onclick="updateButton('8')" class="buttons">‌</button>
+        <button id="9" onclick="updateButton('9')" class="buttons">‌</button>
+    </div>
+
+    <h1 id="winner"></h1>
+
+    <script>
+        let currentplayer="O";
+        document.getElementById("currentplayer").innerHTML=currentplayer+" to play";
+
+        function updateText(){
+            if(currentplayer=='O'){
+                currentplayer='X';
+            }
+            else{
+                currentplayer='O';
+            }
+            document.getElementById("currentplayer").innerHTML=currentplayer+" to play";
+
+        }
+
+        function updateButton(buttonNumber){
+            buttonValue=document.getElementById(buttonNumber).innerHTML;
+            if(buttonValue!='X' && buttonValue!='O'){
+                document.getElementById(buttonNumber).innerHTML=currentplayer;
+                checkWin();
+                updateText();
+            }
+        }
+        function bValue(number){
+            return document.getElementById(number).innerHTML;
+        }
+        function checkWin(){
+        }
+
+
+    </script>
+</body>
+
+
+
+</html>
