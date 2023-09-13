@@ -27,6 +27,7 @@
 
     <script>
         let currentplayer="O";
+        let moveNumber=0;
         document.getElementById("currentplayer").innerHTML=currentplayer+" to play";
 
         function updateText(){
@@ -44,6 +45,7 @@
             buttonValue=document.getElementById(buttonNumber).innerHTML;
             if(buttonValue!='X' && buttonValue!='O'){
                 document.getElementById(buttonNumber).innerHTML=currentplayer;
+                moveNumber+=1;
                 checkWin();
                 updateText();
             }
@@ -52,6 +54,22 @@
             return document.getElementById(number).innerHTML;
         }
         function checkWin(){
+            let one=document.getElementById("1").innerHTML;
+            let two=document.getElementById("2").innerHTML;
+            let three=document.getElementById("3").innerHTML;
+            let four=document.getElementById("4").innerHTML;
+            let five=document.getElementById("5").innerHTML;
+            let six=document.getElementById("6").innerHTML;
+            let seven=document.getElementById("7").innerHTML;
+            let eight=document.getElementById("8").innerHTML;
+            let nine=document.getElementById("9").innerHTML;
+            console.log(one+'\n'+two+'\n'+three);
+            if(((one==two)&&(three==two)&&(one==currentplayer))||((five==four)&&(six==five)&&(four==currentplayer))||((seven==eight)&&(eight==nine)&&(seven==currentplayer))||((one==four)&&(four==seven)&&(one==currentplayer))||((five==two)&&(five==eight)&&(two==currentplayer))||((three==six)&&(three==nine)&&(three==currentplayer))||((one==five)&&(five==nine)&&(one==currentplayer))||((three==five)&&(five==seven)&&(three==currentplayer))){
+                document.getElementById("winner").innerHTML=currentplayer+" WINS";
+            }
+            else if(moveNumber==9){
+                document.getElementById("winner").innerHTML="The match is a draw";
+            }
         }
 
 
